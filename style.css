@@ -268,7 +268,7 @@ h2 {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    background-image: url(/images/history\ woodburn\ lake\ one.jpg);
+    background-image: url(lake1.jpg);
     box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
     border-radius: 2rem;
     transition: transform 0.5s ease-in-out;
@@ -281,7 +281,7 @@ h2 {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    background-image: url(/images/history\ woodburn\ lake\ two.jpg);
+    background-image: url(lake2.jpg);
     box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
     border-radius: 2rem;
     transition: transform 0.5s ease-in-out;
@@ -293,7 +293,7 @@ h2 {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    background-image: url(/images/history\ woodburn\ lake\ three.jpg);
+    background-image: url(lake3.jpg);
     box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
     border-radius: 2rem;
     transition: transform 0.5s ease-in-out;
