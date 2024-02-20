@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+
+/* colors
+Blue (rgb(68 124 189)) - #447CBD
+Olive Green (rgb(76 98 34)) - #4C6222
+Light Blue (rgb(131 212 234)) - #83D4EA
+
+ */
+
+:root {
+    --blue: #447CBD;
+    --green-olive: #4C6222;
+    --sky-blue: #83D4EA;
+}
+
+
+/* panaikina scroolbar in right side */
+
+ ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    outline: none;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+
+/* header */
+
+header {
+    position: relative;
+    /* margin: 1rem; */
+    /* height: 12rem; */
+    padding: 1rem;
+    /* margin-bottom: 10px;
+     */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(174 203 235), rgb(76 134 197), rgb(43 91 163));
+    /* linear-gradient(to right, rgb(173 199 237), rgb(104 155 210), rgb(58 113 182), rgb(45 93 165)); */
+    /* padding-bottom: 6rem; */
+}
+
+.header__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    min-height: 1.8rem;
+}
+
+
+/* title */
+
+h1 {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    /* text-transform: uppercase; */
+    margin-right: 1rem;
+}
+
+.title--lakes {
+    margin-left: 0.8rem;
+    padding: 1rem 0;
+    letter-spacing: 0.1rem;
+}
+
+.title--lakes span {
+    color: var(--green-olive);
+    font-size: 2rem;
+}
+
+
+/* header lake choice */
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.7rem;
+    width: 7rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+
+.header__nav-button {
+    background: #fff;
+    color: var(--green-olive);
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+     */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.header__nav-button:hover {
+    background-color: #006657;
+    color: #fff;
+}
+
+.header__nav-button:active {
+    background-color: #9d5f00;
+}
+
+
+/* header menu buttons */
+
+.header__buttons {
+    position: absolute;
+    bottom: 3.25rem;
+    /* width: 100%; */
+    height: 1.3125rem;
+    left: 21.1875rem;
+}
+
+.header__buttons-menu {
+    position: absolute;
+    width: 10rem;
+    padding: 0.4rem 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    color: #0b7209;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.header__buttons-menu:hover {
+    background-color: #006657;
+    color: #fff;
+}
+
+.header__menu-buttons {
+    position: relative;
+    top: 0;
+    left: 13rem;
+    width: 34rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* display: none; */
+}
+
+.visible {
+    display: none;
+}
+
+.header__menu-buttons--modify {
+    background: #fff;
+    background: #fff;
+    color: var(--green-olive);
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+     */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.7rem 0.2rem 0.rem;
+}
+
+.header__menu-buttons--modify:hover {
+    background-color: #006657;
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+
+/* logo */
+
+.logo__image {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+}
+
+
+/* main history */
+
+h2 {
+    font-size: 2.6rem;
+    color: #fff;
+}
+
+.container {
+    background: linear-gradient(to right, rgb(174 203 235), rgb(76 134 197), rgb(43 91 163));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* max-width: 1200px; */
+    /* margin: 0 20px; */
+    color: var(--green-olive);
+    /* min-width: 300px; */
+}
+
+.history__grid {
+    max-width: 1000px;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: minmax(150px, auto) */
+    grid-template-areas: 'first first first''second second second''third third third';
+}
+
+.text {
+    padding: 10px;
+    font-size: 1.3rem;
+    color: #000000d6;
+    letter-spacing: 1px;
+}
+
+.history__text-1 {
+    grid-area: first;
+    /* border: 1px solid green; */
+    /* grid-column: span 2;
+    grid-row: span 3; */
+}
+
+.history__text-2 {
+    grid-area: third;
+    /* color: #aad0f4; */
+}
+
+.history__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* margin-bottom: 5rem; */
+    padding: 10px;
+    /* width: 300px; */
+    height: 300px;
+    /* border: 1px solid red; */
+}
+
+.image1 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/history\ woodburn\ lake\ one.jpg);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+    border-radius: 2rem;
+    transition: transform 0.5s ease-in-out;
+    /* Updated transition with ease-in-out timing function */
+}
+
+.image2 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/history\ woodburn\ lake\ two.jpg);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+    border-radius: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image3 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/history\ woodburn\ lake\ three.jpg);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+    border-radius: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image1:hover {
+    transform: scale(1.5);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+.image2:hover {
+    transform: scale(1.5);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+.image3:hover {
+    transform: scale(1.5);
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.3), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+
+/* .image3 {
+    background-image: url(/images/upper\ lake.jpg);
+} */
+
+.history__image {
+    width: 700px;
+    height: 300px;
+    background-size: cover;
+}
+
+
+/* lakes */
+
+.container__lakes {
+    background: linear-gradient(to right, rgb(174 203 235), rgb(76 134 197), rgb(43 91 163))
+}
+
+.lakes__grid {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.lakes__grid img {
+    width: 800px;
+    /* Set the width of the image to 100% of its container */
+    max-height: 330px;
+    /* Set the height of the image to 100% of its container */
+    max-width: 590px;
+    /* Ensure images don't exceed the max-width of the grid container */
+    object-fit: cover;
+    border-radius: 20px;
+    /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
+    /* Add a shadow effect */
+    /* Maintain aspect ratio and fill the container */
+}
+
+.lakes__grid-span {
+    color: #0b7209;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    /* width: 1000px; */
+    justify-content: space-around;
+    min-height: 200px;
+    background: skyblue;
+    padding-top: 2rem;
+    background: linear-gradient(to right, rgb(174 203 235), #4c86c5, rgb(43 91 163));
+    /* border-top: 2px solid #fff; */
+    /* border-width: 60px; */
+}
+
+.fab {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.footer__icons {
+    width: 200px;
+}
+
+.footer__icons li {
+    list-style: none;
+}
+
+.footer__icons-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img {
+    cursor: pointer;
+}
+
+@media (max-width:400px) {
+    img {
+        width: 390px;
+    }
+}
